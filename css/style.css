@@ -1,0 +1,255 @@
+:root {
+	--dark-color: #19283f;
+	--redish-color: #ff3150;
+	--yellowish-color: #ffc400;
+	--green-color: #33d1cc;
+	--ice-color: #e8f4f9;
+}
+.navbar {
+	background-color: var(--dark-color);
+	color: white;
+}
+
+.form-control:focus {
+	border: none;
+	outline: none;
+}
+
+.navbar .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar .navbar-nav .nav-link:active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+	color: var(--green-color);
+}
+.navbar .search {
+	border-left: 1px solid var(--green-color);
+}
+.navbar .search svg {
+	color: var(--green-color);
+}
+.navbar .navbar-toggler {
+	color: white;
+	border: 1px solid white;
+}
+.navbar .navbar-toggler:focus {
+	box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+	border-color: var(--green-color);
+}
+.navbar .btn {
+	margin: auto;
+}
+.btn:hover {
+	color: var(--ice-color);
+}
+.btn {
+	background-color: var(--redish-color);
+	color: var(--yellowish-color);
+	font-weight: 400;
+	padding: 0.5rem 1rem;
+}
+@media (width < 992px) {
+	.navbar .btn {
+		margin-right: auto;
+	}
+}
+.det::first-letter {
+	color: var(--redish-color);
+}
+.det {
+	font-family: "Permanent Marker", cursive;
+	font-size: 2rem;
+	color: var(--ice-color);
+}
+.det:hover {
+	color: #ffc400;
+}
+/*end nav*/
+section.landing {
+	background-color: var(--dark-color);
+	min-height: calc(100vh - 73.969px);
+}
+section.wrok {
+	background-color: white;
+	min-height: calc(100vh - 696.96px);
+}
+.title::before {
+	content: "";
+	position: absolute;
+	width: 120px;
+	height: 2px;
+	bottom: -10px;
+	transform: translateX(-17%);
+	background-color: var(--green-color);
+}
+.number {
+	position: absolute;
+	height: 120px;
+	color: var(--ice-color);
+	bottom: 0;
+	transform: translateX(-50%);
+}
+.icon {
+	position: absolute;
+	height: 65px;
+	color: var(--yellowish-color);
+	bottom: 3px;
+	transform: translateX(-50%);
+}
+.icon-2 {
+	position: absolute;
+	height: 45px;
+	color: rgb(0, 140, 255);
+	bottom: 3px;
+	transform: translateX(-50%);
+}
+.icon-3 {
+	position: absolute;
+	height: 45px;
+	color: rgb(0, 140, 255);
+	bottom: 3px;
+	transform: translateX(-50%);
+}
+section.wrok .work-cont {
+	justify-content: center;
+	padding-top: 150px;
+	grid-template-columns: repeat(3, 1fr);
+}
+section.wrok .work-cont .feet {
+	padding: 1rem;
+}
+
+.we-make {
+	background-color: var(--ice-color);
+	min-height: calc(100vh - 1296.944);
+}
+.stuff :first-child {
+	background-color: var(--redish-color);
+	color: var(--yellowish-color);
+	padding: 5px 20px;
+	border: 0px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.stuff > * {
+	padding: 5px 20px;
+	border: 0px;
+	border-radius: 30px;
+}
+.stuff > *:not(:first-child):hover {
+	color: var(--redish-color);
+	cursor: pointer;
+}
+.cont {
+	padding: 10px;
+	position: relative;
+}
+.we-make .row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding-top: 30px;
+}
+.we-make .row .cont::before {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: 500;
+	color: white;
+	content: "";
+	width: 0;
+	height: calc(100% - 20px);
+	background-color: #33d1cc81;
+	transition: 250ms ease-in-out;
+}
+.we-make .row .cont:hover:before {
+	width: calc(100% - 20px);
+	content: "Application";
+}
+
+p .det {
+	font-family: "Permanent Marker", cursive;
+	font-size: 3rem;
+	color: #33d1cc;
+	cursor: pointer;
+}
+.meet-team {
+	background-color: var(--ice-color);
+	min-height: calc(100vh - 2076.877px);
+}
+.team-title :first-child {
+	color: var(--yellowish-color);
+}
+
+.team-members {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: var(--ice-color);
+	gap: 10px;
+}
+.team-member {
+	padding: 10px;
+}
+.about-team-member {
+	color: #ff3150;
+}
+.team-member-name {
+	background-color: var(--green-color);
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@media (width < 992px) {
+	section.wrok .work-cont {
+		justify-content: center;
+		padding-top: 150px;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	section.wrok .work-cont .feet {
+		padding: 4.5rem 0rem;
+	}
+	.stuff > * {
+		padding: 5px 10px;
+		border: 0px;
+		border-radius: 30px;
+	}
+	.we-make .row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.we-make .row .cont::before {
+		font-size: 2rem;
+	}
+	.team-members {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		background-color: var(--ice-color);
+		gap: 10px;
+	}
+}
+@media (width < 450px) {
+	.we-make .row {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.we-make .row .cont::before {
+		font-size: 1rem;
+	}
+	.stuff > * {
+		padding: 5px 3px;
+		border: 0px;
+		border-radius: 30px;
+	}
+	.team-members {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		background-color: var(--ice-color);
+		gap: 10px;
+	}
+}
